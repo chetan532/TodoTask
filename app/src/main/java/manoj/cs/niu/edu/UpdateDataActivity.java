@@ -6,6 +6,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import java.util.ArrayList;
 
@@ -15,6 +17,7 @@ public class UpdateDataActivity extends AppCompatActivity {
     Toolbar mainToolbar;
     RecyclerView recyclerViewTodo;
     DBManager dbManager;
+    Button buttonGoBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +28,14 @@ public class UpdateDataActivity extends AppCompatActivity {
         dbManager = new DBManager(this);
         mainToolbar = findViewById(R.id.mainToolbar);
         recyclerViewTodo = findViewById(R.id.recyclerViewTodo);
+        buttonGoBack = findViewById(R.id.buttonGoBack);
+
+        buttonGoBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
 
         setupEditData();
 

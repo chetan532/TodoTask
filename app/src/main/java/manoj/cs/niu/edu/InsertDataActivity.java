@@ -64,6 +64,7 @@ public class InsertDataActivity extends AppCompatActivity {
 
             TodoModel todoModel = new TodoModel(0, editTextTodoName.getText().toString(), "0");
 
+            editTextTodoName.getText().clear();
             dbManager.insertTodo(todoModel);
 
             Toast.makeText(this, "Item Added", Toast.LENGTH_SHORT).show();
@@ -75,7 +76,7 @@ public class InsertDataActivity extends AppCompatActivity {
             Toast.makeText(this, "Exception", Toast.LENGTH_SHORT).show();
 
         }
-        
+
     }
 
 
