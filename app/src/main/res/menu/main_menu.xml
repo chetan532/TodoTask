@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menuAdd"
+        android:icon="@drawable/ic_baseline_add_24"
+        android:title="Add Todo"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/menuEdit"
+        android:icon="@drawable/ic_baseline_edit_24"
+        android:title="Edit Todo"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/menuDelete"
+        android:icon="@drawable/ic_baseline_delete_forever_24"
+        android:orderInCategory="300"
+        android:title="Delete Todo"
+        app:showAsAction="always" />
+
+</menu>
